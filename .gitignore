@@ -1,20 +1,8 @@
-
-# Terraform ignored files
-**/setup/terraform/.terraform/
+setup/terraform/.terraform/
 **/.terraform/
 *.tfstate
 *.tfstate.*
 crash.log
-crash.*.log
 *.tfvars
-*.tfvars.json
-override.tf
-override.tf.json
-*_override.tf
-*_override.tf.json
-.terraformrc
-terraform.rc
-
-# Local setup credentials
 set_aws.sh
 execute.sh
