@@ -199,6 +199,7 @@ resource "aws_eks_node_group" "main" {
   subnet_ids      = [var.enable_private == true ? aws_subnet.private_subnet.id : aws_subnet.public_subnet.id]
   release_version = nonsensitive(data.aws_ssm_parameter.eks_ami_release_version.value)
   instance_types  = ["t3.small"]
+  ami_type        = "AL2_x86_64"
 
   scaling_config {
     desired_size = 1
