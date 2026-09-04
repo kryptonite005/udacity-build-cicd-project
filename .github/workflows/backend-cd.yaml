@@ -135,6 +135,8 @@ jobs:
 
       - name: Verify backend deployment
         run: |
-          kubectl rollout status deployment/backend --timeout=180s
+          if ! kubectl rollout status deployment/backend --timeout=180s; then
+            kubectl wait --for=condition=available deployment/backend --timeout=180s
+          fi
           kubectl get pods
           kubectl get service backend
