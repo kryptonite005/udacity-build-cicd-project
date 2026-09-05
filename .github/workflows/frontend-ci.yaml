@@ -95,7 +95,7 @@ jobs:
         run: npm ci
 
       - name: Run tests
-      - run: CI=true npm run test -- --matchAll=false
+        run: CI=true npm run test -- --watchAll=false
 
       - name: Set API URL
         run: echo "REACT_APP_MOVIE_API_URL=http://localhost:5000" >> $GITHUB_ENV
