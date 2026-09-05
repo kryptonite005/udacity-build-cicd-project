@@ -65,7 +65,7 @@ jobs:
         run: npm ci
 
       - name: Run tests
-        run: CI=true npm test -- --watchAll=false
+        run: CI=true npm run test -- --watchAll=false
 
   build:
     runs-on: ubuntu-latest
